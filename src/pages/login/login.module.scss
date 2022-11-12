@@ -1,0 +1,56 @@
+#login {
+  background-color: #eab4d48c;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: aliceblue;
+  width: 70%;
+  margin: 0 auto;
+
+  .title {
+    color: red;
+  }
+
+  label {
+    margin: 10px 0px;
+  }
+
+  input {
+    margin-top: 10px;
+    display: block;
+    padding: 8px 12px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #f3f3f3;
+
+    &:focus {
+        border-radius: none;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 5px 20px;
+    background-color: #eab4d48c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+        background-color: red;
+        color: #fff;
+    }
+  }
+}
