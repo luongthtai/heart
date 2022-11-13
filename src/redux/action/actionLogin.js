@@ -4,3 +4,9 @@ export default function handleLogin(action) {
         payload: action
     }
 }
+
+export function handleLogOut() {
+    return {
+        type: "LOGOUT"
+    }
+}

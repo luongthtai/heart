@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Navigate, NavLink } from "react-router-dom";
+import { handleLogOut } from "../../redux/action/actionLogin";
 import styles from "./main.module.scss";
 
 export default function Main() {
@@ -8,6 +9,7 @@ export default function Main() {
   const [toggle, setToggle] = useState(true);
   const [display, setDisplay] = useState(false);
   const [button, setButton] = useState(true);
+  const dispatch = useDispatch()
 
   const handleClick = () => {
     setTimeout(() => {
@@ -33,7 +35,8 @@ export default function Main() {
 
       <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/user" id={styles.user}><i className="fa-regular fa-user"></i></NavLink>
+        <span onClick={() => dispatch(handleLogOut())}>LogOut</span>
       </nav>
 
       <section id={styles.header}>

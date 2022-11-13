@@ -6,11 +6,17 @@ function isLogin(state = initState, action) {
   switch (action.type) {
     case "LOGIN":
       return {
-        isLogin: true
-      }
+        isLogin: true,
+      };
+
+    case "LOGOUT":
+      return {
+        isLogin: false,
+      };
+      
     default:
       return state;
   }
 }
 
-export default isLogin
+export default isLogin;
