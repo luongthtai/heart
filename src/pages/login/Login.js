@@ -7,6 +7,7 @@ import styles from "./login.module.scss";
 export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault()
+    dispatch(handleLogin())
   }
 
   const dispatch = useDispatch()
@@ -36,7 +37,7 @@ export default function Login() {
           required
         />
 
-        <button onClick={() => dispatch(handleLogin())}>Login</button>
+        <button>Login</button>
       </form>
     </div>
   );
